@@ -6,7 +6,7 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   { href: "#work", label: "Work", count: "04" },
-  { href: "#path", label: "Path", count: "03" },
+  { href: "#path", label: "Path", count: "01" },
   { href: "#words", label: "Words", count: "03" },
   { href: "#craft", label: "Decisions", count: "06" },
 ];
@@ -18,10 +18,10 @@ export type Stat = {
 };
 
 export const stats: Stat[] = [
-  { value: "2020", label: "designing since" },
-  { value: "31", label: "products shipped" },
-  { value: "4.7×", label: "activation lift", accent: true },
-  { value: "3", label: "teams embedded" },
+  { value: "2023", label: "coding since" },
+  { value: "10+", label: "projects shipped" },
+  { value: "6", label: "trade-offs made", accent: true },
+  { value: "10+", label: "tools & frameworks" },
 ];
 
 export type Project = {
