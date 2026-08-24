@@ -168,46 +168,47 @@ export const testimonials: Testimonial[] = [
 ];
 
 export type Decision = {
-  choice: string;
-  reasoning: string;
+  rejected: string;
+  chosen: string;
+  why: string;
   project: string;
 };
 
 export const decisions: Decision[] = [
   {
-    choice: "CRDTs over manual locking",
-    reasoning:
-      "Real-time editing needs every client to converge on the same document no matter what order edits arrive in. Yjs turns each keystroke into a mergeable diff instead of a lock request, so ten people can type in the same paragraph and nobody loses a word.",
+    rejected: "Manual locking",
+    chosen: "CRDTs (Yjs)",
+    why: "concurrent edits merge, they never conflict",
     project: "Inkline",
   },
   {
-    choice: "Debounced saves over per-keystroke writes",
-    reasoning:
-      "Hitting Postgres on every keypress would drown the database. The live document stays in memory while people edit; disk only gets touched after a short pause, with full timestamped snapshots on a longer interval for history.",
+    rejected: "Save on every keystroke",
+    chosen: "Debounce + snapshot",
+    why: "keeps the database from drowning",
     project: "Inkline",
   },
   {
-    choice: "OTP over passwords",
-    reasoning:
-      "Nothing to hash, salt, or leak. A 6-digit code that expires in 10 minutes and can only be used once removes an entire class of auth bugs before they can happen.",
+    rejected: "Passwords",
+    chosen: "Email OTP",
+    why: "nothing left to hash, salt, or leak",
     project: "DataBridge",
   },
   {
-    choice: "Soft deletes over hard deletes",
-    reasoning:
-      "Rows get an is_deleted flag instead of disappearing. Every query filters it out, but the data — and the ability to recover it — never actually leaves the table.",
+    rejected: "Hard deletes",
+    chosen: "Soft deletes",
+    why: "data stays recoverable, never gone",
     project: "DataBridge",
   },
   {
-    choice: "Background jobs over blocking the request",
-    reasoning:
-      "Transcribing and compressing a lecture can take minutes. The upload returns immediately while a background worker carries the file through pending → processing → done, and a recovery job rescues anything left stuck after a crash.",
+    rejected: "Block until done",
+    chosen: "Background job + recovery",
+    why: "upload returns instantly, survives a restart",
     project: "AI Lecture Notes Assistant",
   },
   {
-    choice: "Graceful fallback over a hard failure",
-    reasoning:
-      "If the AI provider is down or the quota's gone, the quiz still generates from a fallback question set instead of showing the user an error screen.",
+    rejected: "Fail on quota limit",
+    chosen: "Fallback questions",
+    why: "the quiz still runs either way",
     project: "AI Quiz Events",
   },
 ];
