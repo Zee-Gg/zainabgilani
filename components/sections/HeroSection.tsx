@@ -77,7 +77,7 @@ export function HeroSection() {
             className="animate-fade-in-up max-w-[520px] text-[15.5px] leading-[1.7] text-muted text-pretty sm:text-lg"
             style={{ animationDelay: "780ms" }}
           >
-            Six years shipping full-stack products across operations, finance
+            Three years shipping full-stack products across operations, finance
             and early-stage teams — from database schema to the pixel that
             ships.
           </p>
