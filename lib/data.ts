@@ -20,7 +20,7 @@ export type Stat = {
 export const stats: Stat[] = [
   { value: "2023", label: "coding since" },
   { value: "10+", label: "projects shipped" },
-  { value: "6", label: "trade-offs made", accent: true },
+  { value: "14+", label: "live & deployed", accent: true },
   { value: "10+", label: "tools & frameworks" },
 ];
 
