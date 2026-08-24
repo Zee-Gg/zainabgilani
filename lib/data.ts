@@ -197,7 +197,7 @@ export const decisions: Decision[] = [
 ];
 
 export const social = {
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/zainab-gilani-24093a299",
   github: "https://github.com/Zee-Gg",
   email: "zainabgilani2226@gmail.com",
 };
