@@ -97,12 +97,12 @@ export function HeroSection() {
               View my work
             </Button>
             <Button
-              href="/resume.pdf"
+              href="/Software_Engineer___Zainab_Gilani.pdf"
               variant="outline"
               size="lg"
               icon={<FileDown className="order-first h-[17px] w-[17px] stroke-[1.9]" />}
             >
-              Résumé
+              Resume
             </Button>
           </div>
         </div>
