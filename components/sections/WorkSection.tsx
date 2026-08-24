@@ -18,7 +18,11 @@ export function WorkSection() {
       id="work"
       className="border-b border-hairline px-6 py-16 sm:px-10 sm:py-20 lg:px-[72px] lg:pb-[88px]"
     >
-      <SectionHeader title="Selected work" meta={`${filtered.length} of 31 shipped`} className="mb-6" />
+      <SectionHeader
+        title="Selected work"
+        meta={`${filtered.length} of ${projects.length} shipped`}
+        className="mb-6"
+      />
 
       <p className="mb-8 max-w-[560px] text-[15px] leading-[1.7] text-muted">
         A handful of the products I&apos;ve taken from schema to shipped

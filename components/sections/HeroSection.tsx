@@ -114,7 +114,7 @@ export function HeroSection() {
           <div className="flex flex-col gap-1">
             <span className="text-[11px] tracking-[0.1em] text-meta uppercase">Currently</span>
             <span className="text-[14px] leading-[1.5] text-text">
-              Building the dispatch platform at Northrail
+              Shipping full-stack, AI-powered side projects
             </span>
           </div>
           <div className="flex flex-col gap-1">
