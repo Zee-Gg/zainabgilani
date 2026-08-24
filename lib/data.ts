@@ -112,7 +112,7 @@ export const roles: Role[] = [
       "Built and shipped web features integrating AI-driven functionality — working across the stack from API integration to the interfaces people actually used.",
     links: [
       // add a project link here if you have one, e.g.:
-      // { href: "#w-project-id", label: "Related project" },
+       { href: "https://askpdf-b5uycurnv9xxuu57pesh8m.streamlit.app/", label: "AskPDF" },
     ],
   },
 ];

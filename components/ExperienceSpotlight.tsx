@@ -1,9 +1,18 @@
 "use client";
 
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import type { Role } from "@/lib/data";
 import { useInView } from "../app/hooks/useInView";
 
-export function ExperienceSpotlight({ period, current, company, title, description }: Role) {
+export function ExperienceSpotlight({
+  period,
+  current,
+  company,
+  title,
+  description,
+  links,
+}: Role) {
   const { ref, inView } = useInView<HTMLDivElement>();
   const words = company.split(" ");
 
@@ -77,6 +86,30 @@ export function ExperienceSpotlight({ period, current, company, title, descripti
         >
           {description}
         </p>
+
+        {links.length > 0 && (
+          <div
+            className="mt-5 flex flex-wrap items-center gap-4"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? "translateY(0)" : "translateY(8px)",
+              transition: "opacity 500ms ease-out, transform 500ms ease-out",
+              transitionDelay: `${words.length * 90 + 360}ms`,
+            }}
+          >
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                className="inline-flex items-center gap-1.5 text-[13px] font-medium text-text transition-colors duration-150 hover:text-orchid-text"
+              >
+                <ArrowUpRight className="h-[13px] w-[13px]" />
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
