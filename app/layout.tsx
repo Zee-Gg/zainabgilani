@@ -15,9 +15,9 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Zainab Gilani — Product Designer",
+  title: "Zainab Gilani — Full-Stack Engineer",
   description:
-    "Product designer working across operations, finance and early-stage teams — dense workflows, honest onboarding, and design systems that stay coherent long after handoff.",
+    "Full-stack Engineer building AI-powered web apps — from real-time collaboration and multi-tenant systems to background job pipelines. Next.js, TypeScript, Node.js, PostgreSQL.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
