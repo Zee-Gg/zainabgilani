@@ -132,7 +132,7 @@ export function HeroSection() {
             <StatItem key={stat.label} {...stat} delay={1050 + i * 70} />
           ))}
         </div>
-
+        
       </div>
     </section>
   );

@@ -36,7 +36,7 @@ export function Sidebar() {
         className="animate-fade-in-up flex flex-col gap-5 px-2 pt-10 lg:pt-0"
         style={{ animationDelay: "140ms" }}
       >
-
+       
         <SocialLinks />
       </div>
     </aside>
