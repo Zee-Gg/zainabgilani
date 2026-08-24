@@ -198,6 +198,6 @@ export const decisions: Decision[] = [
 
 export const social = {
   linkedin: "https://www.linkedin.com/",
-  dribbble: "https://dribbble.com/",
-  email: "zainab@example.com",
+  github: "https://github.com/Zee-Gg",
+  email: "zainabgilani2226@gmail.com",
 };

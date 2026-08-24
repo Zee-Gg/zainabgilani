@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Globe, Mail, Palette } from "lucide-react";
+import { Globe, Mail, GitBranch } from "lucide-react";
 import { social } from "@/lib/data";
 
 export function SocialLinks() {
   const links = [
     { href: social.linkedin, label: "LinkedIn", Icon: Globe },
-    { href: social.dribbble, label: "Dribbble", Icon: Palette },
+    { href: social.github, label: "GitHub", Icon: GitBranch },
     { href: `mailto:${social.email}`, label: "Email", Icon: Mail },
   ];
 
