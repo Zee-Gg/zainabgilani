@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Nocturne — dark canvas, one flat orchid accent, no gradients */
+  --color-canvas: #14101a;
+  --color-text: #f6f2f8;
+  --color-muted: #a79db0;
+  --color-meta: #968e9e;
+
+  --color-orchid: #d44a9e;
+  --color-orchid-btn: #e75fb0;
+  --color-orchid-btn-hover: #f477c2;
+  --color-orchid-text: #f0a8d4;
+  --color-orchid-text-hover: #ffc9e6;
+
+  --color-hairline: rgba(246, 242, 248, 0.1);
+  --color-panel: rgba(246, 242, 248, 0.04);
+  --color-surface-hover: rgba(246, 242, 248, 0.06);
+  --color-surface-hover-strong: rgba(246, 242, 248, 0.07);
+  --color-row-hover: rgba(246, 242, 248, 0.05);
+  --color-border-soft: rgba(246, 242, 248, 0.14);
+  --color-border-strong: rgba(246, 242, 248, 0.18);
+  --color-border-strong-hover: rgba(246, 242, 248, 0.4);
+  --color-badge: rgba(212, 74, 158, 0.16);
+  --color-badge-strong: rgba(212, 74, 158, 0.2);
+
+  --font-display: var(--font-familjen-grotesk), sans-serif;
+  --font-body: var(--font-sora), sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--color-orchid-text);
+  }
+
+  ::selection {
+    background: var(--color-badge-strong);
+    color: var(--color-text);
+  }
+
+  :target {
+    scroll-margin-top: 40px;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-fade-in-up {
+  animation: fade-in-up 640ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+}
+
+@utility animate-pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes reveal-type {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+@utility animate-reveal-type {
+  animation: reveal-type 700ms steps(20, end) both;
+}
+
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(300%);
+  }
+}
+
+@utility animate-scroll-cue {
+  animation: scroll-cue 1.6s ease-in-out infinite;
+}
+
+@keyframes cursor-drift {
+  0% { transform: translate(8%, 15%); opacity: 0; }
+  12% { opacity: 1; }
+  45% { transform: translate(72%, 50%); }
+  55% { transform: translate(72%, 50%); }
+  88% { opacity: 1; }
+  100% { transform: translate(30%, 78%); opacity: 0; }
+}
+
+@utility animate-cursor-drift {
+  animation: cursor-drift 7s ease-in-out infinite;
+}
+
+@keyframes cell-in {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: scale(1); }
+}
+@utility animate-cell-in {
+  animation: cell-in 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(var(--tag-rot, 0deg)); }
+  50% { transform: translateY(-9px) rotate(var(--tag-rot, 0deg)); }
+}
+@utility animate-float-slow {
+  animation: float-slow 5.5s ease-in-out infinite;
+}
+
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(0.3em); filter: blur(6px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@utility animate-word-in {
+  animation: word-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@utility animate-slow-spin {
+  animation: slow-spin 50s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@utility animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes draw-underline {
+  from { stroke-dashoffset: 220; }
+  to { stroke-dashoffset: 0; }
+}
+@utility animate-draw-underline {
+  animation: draw-underline 900ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes detail-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-detail-in {
+  animation: detail-in 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
