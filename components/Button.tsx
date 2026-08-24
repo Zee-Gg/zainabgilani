@@ -9,6 +9,7 @@ type ButtonProps = {
   icon?: ReactNode;
   fullWidth?: boolean;
   className?: string;
+  target?: string;
 };
 
 const sizeStyles = {
@@ -31,10 +32,12 @@ export function Button({
   icon,
   fullWidth = false,
   className = "",
+  target,
 }: ButtonProps) {
   return (
     <Link
       href={href}
+      target={target}
       className={`inline-flex items-center transition-[background-color,border-color,transform,box-shadow] duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid ${
         fullWidth ? "justify-between" : ""
       } ${sizeStyles[size]} ${variantStyles[variant]} ${className}`}

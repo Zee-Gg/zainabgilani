@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-import { Button } from "./Button";
 import { PillBadge } from "./PillBadge";
 import { SidebarNav } from "./SideBarNav";
 import { StatusAvatar } from "./StatusAvatar";
@@ -16,10 +14,10 @@ export function Sidebar() {
             <span className="font-display text-[25px] font-bold tracking-[-0.03em]">
               Zainab Gilani
             </span>
-            <span className="text-sm text-muted">Full-stack developer · Rawalpindi</span>
+            <span className="text-sm text-muted">  Full-stack Engineer · Rawalpindi</span>
           </div>
           <div className="flex items-center justify-between">
-            <PillBadge pulse>Open to work · Q4 2026</PillBadge>
+            <PillBadge pulse>Open to work </PillBadge>
             <LiveClock />
           </div>
         </div>
@@ -38,16 +36,7 @@ export function Sidebar() {
         className="animate-fade-in-up flex flex-col gap-5 px-2 pt-10 lg:pt-0"
         style={{ animationDelay: "140ms" }}
       >
-        <Button
-          href="#contact"
-          fullWidth
-          className="group"
-          icon={
-            <ArrowUpRight className="h-[17px] w-[17px] stroke-[2.2] transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          }
-        >
-          Book a call
-        </Button>
+
         <SocialLinks />
       </div>
     </aside>
