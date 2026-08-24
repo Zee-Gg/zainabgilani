@@ -16,7 +16,7 @@ export function Sidebar() {
             <span className="font-display text-[25px] font-bold tracking-[-0.03em]">
               Zainab Gilani
             </span>
-            <span className="text-sm text-muted">Full-stack developer · Karachi</span>
+            <span className="text-sm text-muted">Full-stack developer · Rawalpindi</span>
           </div>
           <div className="flex items-center justify-between">
             <PillBadge pulse>Open to work · Q4 2026</PillBadge>

@@ -112,14 +112,14 @@ export function HeroSection() {
           style={{ animationDelay: "940ms" }}
         >
           <div className="flex flex-col gap-1">
-            <span className="text-[11px] tracking-[0.1em] text-meta uppercase">Currently</span>
+            <span className="text-[11px] tracking-[0.1em] text-meta uppercase">Looking for</span>
             <span className="text-[14px] leading-[1.5] text-text">
-              Shipping full-stack, AI-powered side projects
+              Full-stack roles & freelance work
             </span>
           </div>
           <div className="flex flex-col gap-1">
             <span className="text-[11px] tracking-[0.1em] text-meta uppercase">Based in</span>
-            <span className="text-[14px] text-text">Karachi, PK — UTC+5</span>
+            <span className="text-[14px] text-text">Rawalpindi, PK — UTC+5</span>
           </div>
         </div>
       </div>
