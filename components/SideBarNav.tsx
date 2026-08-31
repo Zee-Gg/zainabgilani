@@ -12,7 +12,7 @@ const iconMap: Record<string, LucideIcon> = {
   "#craft": Terminal,
 };
 
-export function SidebarNav() {
+export function SidebarNav({ onNavigate }: { onNavigate?: () => void } = {}) {
   const [active, setActive] = useState<string>("");
 
   useEffect(() => {
@@ -47,6 +47,7 @@ export function SidebarNav() {
           <Link
             key={item.href}
             href={item.href}
+            onClick={onNavigate}
             className={`group relative flex items-center gap-3 overflow-hidden rounded-xl py-2.5 pr-3.5 pl-4 text-[15px] transition-colors duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orchid ${
               isActive ? "text-text" : "text-muted hover:text-text"
             }`}

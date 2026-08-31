@@ -1,4 +1,5 @@
 import { Sidebar } from "@/components/Sidebar";
+import { MobileHeader } from "@/components/MobileHeader";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WorkSection } from "@/components/sections/WorkSection";
 import { PathSection } from "@/components/sections/PathSection";
@@ -9,6 +10,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 export default function Home() {
   return (
     <div className="grid grid-cols-1 items-start lg:grid-cols-[380px_1fr]">
+      <MobileHeader />
       <Sidebar />
       <main className="min-w-0">
         <HeroSection />

@@ -6,7 +6,7 @@ import { SocialLinks } from "./SocialLinks";
 
 export function Sidebar() {
   return (
-    <aside className="flex flex-col justify-between border-hairline px-8 py-11 lg:sticky lg:top-0 lg:h-screen lg:border-r">
+    <aside className="hidden flex-col justify-between border-hairline px-8 py-11 lg:sticky lg:top-0 lg:flex lg:h-screen lg:border-r">
       <div className="flex flex-col gap-8">
         <div className="animate-fade-in-up flex flex-col gap-4 px-2">
           <StatusAvatar alt="Zainab Gilani" size={92} />
