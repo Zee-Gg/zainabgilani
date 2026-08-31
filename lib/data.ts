@@ -129,25 +129,25 @@ export const testimonials: Testimonial[] = [
   {
     featured: true,
     quote:
-      "She sat with our planners for a week before drawing anything. The fix was obvious once she showed us what they were actually doing.",
-    name: "Hana Yusuf",
-    role: "VP Product, Northrail",
-    linkedin: "https://www.linkedin.com/",
+      "I’ve worked with Zainab on multiple projects, and her vast knowledge and dedication always stand out. She gives every project the time and attention it deserves and has a keen eye for identifying problems and finding thoughtful solutions. Working with her has always been a great experience, and I truly admire her passion for learning, problem-solving, and delivering quality work.",
+    name: "Khalil Ahmad",
+    role: "AI-Forward Software Engineer",
+    linkedin: "https://www.linkedin.com/in/in-khalil-ahmad/",
   },
-  {
-    quote:
-      "The design system she left behind is still the reason our releases look like one product. That is rarer than it sounds.",
-    name: "Omar Sheikh",
-    role: "Engineering Lead, Meridian",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    quote:
-      "Calm in critique, ruthless about scope, and the only designer I've worked with who writes her own acceptance criteria.",
-    name: "Priya Nair",
-    role: "Founder, Studio Kern",
-    linkedin: "https://www.linkedin.com/",
-  },
+  // {
+  //   quote:
+  //     "The design system she left behind is still the reason our releases look like one product. That is rarer than it sounds.",
+  //   name: "Omar Sheikh",
+  //   role: "Engineering Lead, Meridian",
+  //   linkedin: "https://www.linkedin.com/",
+  // },
+  // {
+  //   quote:
+  //     "Calm in critique, ruthless about scope, and the only designer I've worked with who writes her own acceptance criteria.",
+  //   name: "Priya Nair",
+  //   role: "Founder, Studio Kern",
+  //   linkedin: "https://www.linkedin.com/",
+  // },
 ];
 
 export type Decision = {
